@@ -25,11 +25,11 @@ function percentage(partialValue, totalValue) {
 } 
 
 function itsNovember() {
-    if(now.getMonth() == 10) {
+    const innerNow = new Date();
+    if(innerNow.getMonth() == 10) {
         return true;
     } else return false;
 }
-
 const nstart = new Date("11/01/" + now.getFullYear() + " 00:00:00").getTime();
 const dstart = new Date("12/01/" + now.getFullYear() + " 00:00:00").getTime();
 const mlenght = dstart - nstart;
@@ -45,8 +45,11 @@ function NNN() {
         $('.until').html(msToHMS(until));
         $('.stats_hours').html(msToHMS(until_now));
         $('.stats_percentage').html(percentage(until_now, mlenght).toFixed(5) + "%");
-        setTimeout(NNN, 1000);
+        $('.non_nnn').hide();
+        setTimeout(NNN, 250);
     } else {
+        $('.nnn').hide();
         $('.non_nnn').show();
+        setTimeout(NNN, 250);
     }
 };
