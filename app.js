@@ -14,7 +14,7 @@ function msToHMS(ms) {
     let seconds = parseInt(ms / 1000);
     const hours = parseInt(seconds / 3600);
     seconds = seconds % 3600;
-    const minutes = parseInt(seconds / 60); 
+    const minutes = parseInt(seconds / 60);
     seconds = seconds % 60;
     return (pad(hours, 2) + ":" + pad(minutes, 2) + ":" + pad(seconds, 2));
 }
@@ -22,11 +22,11 @@ function msToHMS(ms) {
 // https://stackoverflow.com/questions/30922008/calculate-percentage-javascript
 function percentage(partialValue, totalValue) {
     return (100 * partialValue) / totalValue;
-} 
+}
 
 function itsNovember() {
     const innerNow = new Date();
-    if(innerNow.getMonth() == 10) {
+    if (innerNow.getMonth() == 10) {
         return true;
     } else return false;
 }
@@ -35,11 +35,13 @@ const dstart = new Date("12/01/" + now.getFullYear() + " 00:00:00").getTime();
 const mlenght = dstart - nstart;
 
 function NNN() {
-    const now_ms = Date.now();
-    const until = (dstart-now_ms);
-    const until_now = (dstart-nstart)-until;
-    
-    if(itsNovember()) {
+    const offset = now.getTimezoneOffset() * 60000;
+    const now_ms = (Date.now() - offset);
+    const until = (dstart - now_ms);
+    const until_now = (dstart - nstart) - until;
+    console.log(now.getTimezoneOffset())
+
+    if (itsNovember()) {
         $('.nnn').show();
         $('.nnn_stats').show();
         $('.until').html(msToHMS(until));
