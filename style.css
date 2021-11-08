@@ -6,6 +6,9 @@
     padding: 0;
     scrollbar-width: none;
     scrollbar-color: rgba(255, 255, 255, .1) #191d21;
+}
+
+body {
     overflow: hidden;
 }
 

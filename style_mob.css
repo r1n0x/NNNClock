@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Mob 200";
+    src: url("Mob200.ttf")/* TTF file for CSS3 browsers */
+}
+
+* {
+    font-family: 'Mob 200';
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    scrollbar-color: rgba(255, 255, 255, .1) #191d21;
+}
+
+body {
+    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    font-size: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer {
+    color: white;
+    align-self: center;
+    line-height: 88%;
+    font-size: 475%;
+}
+
+.stats_percentage {
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 80%;
+    }
+}
