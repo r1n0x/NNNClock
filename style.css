@@ -62,9 +62,20 @@ body {
     font-size: 20%;
 }
 
+.clock {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 100%;
+    font-size: 20%;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         font-size: 80%;
     }
-    .nnn_stats,
+    .nnn_stats {
+        line-height: 100%;
+        font-size: 30%;
+    }
 }
