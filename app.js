@@ -35,11 +35,9 @@ const dstart = new Date("12/01/" + now.getFullYear() + " 00:00:00").getTime();
 const mlenght = dstart - nstart;
 
 function NNN() {
-    const offset = now.getTimezoneOffset() * 60000;
-    const now_ms = (Date.now() - offset);
+    const now_ms = Date.now();
     const until = (dstart - now_ms);
     const until_now = (dstart - nstart) - until;
-    console.log(now.getTimezoneOffset())
 
     if (itsNovember()) {
         $('.nnn').show();
